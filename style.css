@@ -158,6 +158,26 @@ section {
   backdrop-filter: blur(10px);
   width: 85%;
 }
+/* 
+	  ================= TITLES =================
+*/
+.title {
+  align-self: baseline;
+  padding: 0 5px;
+}
+
+.title h2 {
+  font-size: 1.5rem;
+}
+
+.title img {
+  height: 1rem;
+  transition: 0.4s all ease;
+}
+
+.title img:hover {
+  transform: rotate(-90deg);
+}
 
 /* 
 	  ===== PROFIL =====
@@ -255,24 +275,6 @@ ul li a img {
   align-items: flex-start;
 }
 
-.title {
-  align-self: baseline;
-  padding: 0 5px;
-}
-
-.title h2 {
-  font-size: 1.5rem;
-}
-
-.title img {
-  height: 1rem;
-  transition: 0.4s all ease;
-}
-
-.title img:hover {
-  transform: rotate(-90deg);
-}
-
 .techno {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -361,7 +363,59 @@ ul li a img {
   width: 100%;
 }
 
-
+/* 
+	  ================= FORM =================
+*/
+/* 
+	  ================= BACK-TO-TOP =================
+*/
+#backToTopBtn {
+  height: 45px;
+  width: 45px;
+  display: none;
+  position: fixed;
+  align-self: flex-end;
+  bottom: 85px;
+  background-color: var(--g);
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0px 0px 4px 0px var(--g-c);
+  transition: all 0.1s ease-in-out;
+  margin-right: 15px;
+}
+#backToTopBtn:hover {
+  background-color: var(--g-cp);
+}
+#backToTopBtn:active {
+  transform: scale(1.1);
+}
+#backToTopBtn img {
+  height: 35px;
+  transition: all 0.4s ease-in-out;
+}
+#backToTopBtn:hover img {
+  transform: scale(0.9);
+}
+/* 
+	  ================= FOOTER =================
+*/
+.footer-bottom {
+  align-self: center;
+  width: 85%;
+  padding: 20px 10px;
+  border-top: 1px solid rgba(69, 70, 70, 0.4);
+}
+.footer-bottom a {
+  color: rgba(227, 232, 244, 0.7);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.footer-bottom a span {
+  color: var(--g-c);
+  transition: all 0.3s ease-in-out;
+  font-size: 1rem;
+}
 /* 
 	  ================= RESPONSIVE =================
 */

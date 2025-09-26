@@ -3,10 +3,15 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Page carte interactive" />
     <title>Louis BOUSQUET - Portfolio</title>
+    <meta name="description" content="Portfolio développeur web, Louis Bousquet étudiant à Epitech" />
+    <meta name="keywords" content="Louis Bousquet, développeur, developer, Montpellier, web" />
+    <meta name="author" content="Louis Bousquet" />
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="referrer" content="no-referrer" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <link rel="icon" type="image/x-icon" href="" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,6 +24,12 @@
     <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-chrome-192x192.png'">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <!-- Balises Open Graph pour LinkedIn -->
+    <meta property="og:title" content="Portfolio - Louis Bousquet" />
+    <meta property="og:description" content="Portfolio développeur web, Louis Bousquet étudiant à Epitech" />
+    <meta property="og:type" content="Louis Bousquet" />
+    <meta property="og:url" content="https://www.louisbousquet.fr/" />
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -128,37 +139,49 @@
                         target="_blank" class="flex"><img src="img/icon/techno/penpot.png" alt="Icon Penpot"></a></li>
             </ul>
         </div>
-        <!-- <div class="container flex-col radius-1 padding-1 gap-1"> 
-            <iframe class="container radius-1 " title="deezer-widget" src="https://widget.deezer.com/widget/dark/album/417419737" width="100%" height="150" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
-        </div> -->
+        <div class="container flex-col radius-1 padding-1 gap-1">
+            <iframe class="container radius-1 " title="deezer-widget"
+                src="https://widget.deezer.com/widget/dark/album/417419737" width="100%" height="150" frameborder="0"
+                allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
+        </div>
         <div class="form container flex-col radius-1 padding-1 gap-1">
             <div class="title gap-1 flex">
                 <h2>CONTACT</h2>
                 <img src="img/icon/arrow.png" alt="" />
             </div>
             <form action="#" method="POST" class="flex-col gap-1 w-full">
-                <div class="flex-col gap-05 w-full">
+                <div class="flex-col gap-1 w-full">
                     <label for="name" class="label">Nom</label>
                     <input type="text" id="name" name="name" placeholder="Votre nom" required
-                        class="input radius-05 padding-05 w-full">
+                        class="input radius-1 padding-1 w-full">
                 </div>
-                <div class="flex-col gap-05 w-full">
+                <div class="flex-col gap-1 w-full">
                     <label for="email" class="label">Email</label>
                     <input type="email" id="email" name="email" placeholder="Votre email" required
-                        class="input radius-05 padding-05 w-full">
+                        class="input radius-1 padding-1 w-full">
                 </div>
-                <div class="flex-col gap-05 w-full">
+                <div class="flex-col gap-1 w-full">
                     <label for="subject" class="label">Sujet</label>
                     <input type="text" id="subject" name="subject" placeholder="Sujet de votre message" required
-                        class="input radius-05 padding-05 w-full">
+                        class="input radius-1 padding-1 w-full">
                 </div>
-                <div class="flex-col gap-05 w-full">
+                <div class="flex-col gap-1 w-full">
                     <label for="message" class="label">Message</label>
                     <textarea id="message" name="message" rows="4" placeholder="Votre message..." required
-                        class="input radius-05 padding-05 w-full"></textarea>
+                        class="input radius-1 padding-1 w-full"></textarea>
                 </div>
-                <button type="submit" class="button radius-05 padding-05 w-full">Envoyer</button>
+                <button type="submit" class="button radius-1 padding-1 w-full">Envoyer</button>
             </form>
+        </div>
+        <button id="backToTopBtn" onclick="scrollToTop()" aria-label="button back to top"><img
+                src="img/arrow-backtotop.webp" alt=""></button>
+        <div class="footer-bottom flex-col gap-1 ">
+            <a href="">© 2025 | Tous droits réservés par <span>Louis Bousquet</span></a>
+            <a href="https://www.louisbousquet.fr">Site développé par <span>LB</span></a>
+            <a href="https://bff.ecoindex.fr/redirect/?url=https://www.louisbousquet.fr/" target="_blank"><img
+                    src="https://bff.ecoindex.fr/badge/?theme=dark&url=https://www.louisbousquet.fr/"
+                    alt="Ecoindex Badge" /></a>
+            <div id="wcb" class="carbonbadge wcb-d"></div>
         </div>
         <svg id="texture">
             <filter id="noise">
@@ -168,6 +191,7 @@
             <rect width="100%" height="100%" filter="url(#noise)"></rect>
         </svg>
     </section>
+    <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
 </body>
 
 </html>
