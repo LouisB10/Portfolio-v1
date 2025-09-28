@@ -1,0 +1,60 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: portfolio-deployment
+  namespace: portfolio-louis
+  labels:
+    app: portfolio
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: portfolio
+  template:
+    metadata:
+      labels:
+        app: portfolio
+    spec:
+      imagePullSecrets:
+      - name: api-dms-secret
+      containers:
+      - name: portfolio
+        image: victor54454/portfolio-louis:latest
+        ports:
+        - containerPort: 443
+          name: https
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "100m"
+          limits:
+            memory: "128Mi"
+            cpu: "200m"
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 443
+            scheme: HTTPS
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 443
+            scheme: HTTPS
+          initialDelaySeconds: 5
+          periodSeconds: 5
+
+#############################################################################################
+#livenessProbe → Vérifie si l'application est "vivante" via une requête HTTPS sur /         #
+#                                                                                           #
+#Attend 30s avant la première vérification                                                  #
+#Vérifie toutes les 10s ensuite                                                             # 
+#Si elle échoue, Kubernetes redémarre le pod                                                #
+#                                                                                           #
+#                                                                                           #
+#readinessProbe → Vérifie si l'application est prête à recevoir du trafic                   #
+#Commence après 5s                                                                          #
+#Vérifie toutes les 5s                                                                      #
+#Si elle échoue, le pod est retiré du load balancer                                         #
+##############################################################################################
