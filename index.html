@@ -1,197 +1,372 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Louis BOUSQUET - Portfolio</title>
-    <meta name="description" content="Portfolio développeur web, Louis Bousquet étudiant à Epitech" />
-    <meta name="keywords" content="Louis Bousquet, développeur, developer, Montpellier, web" />
+    <meta
+      name="description"
+      content="Portfolio développeur web, Louis Bousquet étudiant à Epitech"
+    />
+    <meta
+      name="keywords"
+      content="Louis Bousquet, développeur, developer, Montpellier, web"
+    />
     <meta name="author" content="Louis Bousquet" />
-    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0"
+    />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="referrer" content="no-referrer" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-    <link rel="icon" type="image/x-icon" href="" />
+
+    <!-- Permissions Policy pour éviter les erreurs de capteurs -->
+    <meta
+      http-equiv="Permissions-Policy"
+      content="accelerometer=(), gyroscope=(), magnetometer=(), camera=(), microphone=(), geolocation=()"
+    />
+
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400..700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
     <!-- Favicon -->
-    <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="img/favicon/android-chrome-512x512.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-chrome-192x192.png'">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="img/favicon/android-chrome-512x512.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="img/favicon/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon/favicon-16x16.png"
+    />
     <!-- Balises Open Graph pour LinkedIn -->
     <meta property="og:title" content="Portfolio - Louis Bousquet" />
-    <meta property="og:description" content="Portfolio développeur web, Louis Bousquet étudiant à Epitech" />
-    <meta property="og:type" content="Louis Bousquet" />
-    <meta property="og:url" content="https://www.louisbousquet.fr/" />
-    <script src="script.js"></script>
-</head>
+    <meta
+      property="og:description"
+      content="Portfolio développeur web, Louis Bousquet étudiant à Epitech"
+    />
+    <meta property="og:website" content="https://www.louisbousquet.fr/" />
+    <!-- Ajouter EmailJS SDK dans le head -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  </head>
 
-<body>
-    <section class="w-full gap-1 ">
-        <div class="profil container flex radius-1 padding-1 ">
-            <img src="img/pdp.jpg" alt="" class="logo radius-1" />
-            <div class="navbar flex-col gap-1">
-                <div class="flex-col">
-                    <p>LOUIS BOUSQUET</p>
-                    <p>WEB DEVELOPER</p>
-                </div>
-                <ul class="flex  radius-1">
-                    <li><a href="img/cv.pdf" target="_blank" class="cv flex"><img src="img/icon/nav/cv.png"
-                                alt="Icon CV"></a>
-                    </li>
-                    <li><a href="mailto:louisbousquet13@gmail.com" target="_blank" class="flex"><img
-                                src="img/icon/nav/email.png" alt="Icon E-mail"></a></li>
-                    <li><a href="https://github.com/LouisB10" target="_blank" class="flex"><img
-                                src="img/icon/nav/github.png" alt="Icon Github"></a></li>
-                    <li><a href="https://www.linkedin.com/in/louis-bousquet-7077aa281/" target="_blank"
-                            class="flex"><img src="img/icon/nav/linkedin.png" alt="Icon Linkedin"></a></li>
-                </ul>
-            </div>
+  <body>
+    {# <div></div> #}
+    <section class="w-full gap-1">
+      <div class="profil container flex radius-1 padding-1">
+        <img src="img/pdp.jpg" alt="" class="logo radius-1" />
+        <div class="navbar flex-col gap-1">
+          <div class="flex-col">
+            <p>LOUIS BOUSQUET</p>
+            <p>WEB DEVELOPER</p>
+          </div>
+          <ul class="flex radius-1">
+            <li>
+              <a href="img/cv.pdf" target="_blank" class="cv flex"
+                ><img src="img/icon/nav/cv.png" alt="Icon CV"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="mailto:louisbousquet13@gmail.com"
+                target="_blank"
+                class="flex"
+                ><img src="img/icon/nav/email.png" alt="Icon E-mail"
+              /></a>
+            </li>
+            <li>
+              <a href="https://github.com/LouisB10" target="_blank" class="flex"
+                ><img src="img/icon/nav/github.png" alt="Icon Github"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/louis-bousquet-7077aa281/"
+                target="_blank"
+                class="flex"
+                ><img src="img/icon/nav/linkedin.png" alt="Icon Linkedin"
+              /></a>
+            </li>
+          </ul>
         </div>
-        <div class="skills container flex-col radius-1 padding-1">
-            <div class="title gap-1 flex">
-                <h2>SKILLS</h2>
-                <img src="img/icon/arrow.png" alt="" />
-            </div>
-            <div class="techno w-full">
-                <div class="flex-col">
-                    <img src="img/icon/techno/html.png" alt="">
-                    <p>HTML</p>
-                </div>
-                <div class="flex-col">
-                    <img src="img/icon/techno/css.png" alt="">
-                    <p>CSS</p>
-                </div>
-                <div class="flex-col">
-                    <img src="img/icon/techno/js.png" alt="">
-                    <p>JavaScript</p>
-                </div>
-                <div class="flex-col">
-                    <img src="img/icon/techno/astro.png" alt="">
-                    <p>Astro</p>
-                </div>
-                <div class="flex-col">
-                    <img src="img/icon/techno/symfony.png" alt="">
-                    <p>Symfony</p>
-                </div>
-                <div class="flex-col">
-                    <img src="img/icon/techno/postgresql.png" alt="">
-                    <p>PostgreSQL</p>
-                </div>
-            </div>
+      </div>
+      <div class="skills container flex-col radius-1 padding-1">
+        <div class="title gap-1 flex">
+          <h2>SKILLS</h2>
+          <img src="img/icon/arrow.png" alt="" />
         </div>
-        <div class="projects container flex-col radius-1 padding-1 gap-1">
-            <div class="title gap-1 flex">
-                <h2>DIGI-3</h2>
-                <img src="img/icon/arrow.png" alt="" />
-            </div>
-            <div class="space-b flex gap-1  w-full">
-                <div class="techno gap-1 flex">
-                    <a href="https://symfony.com" target="_blank" rel="noopener noreferrer"
-                        class="symfony flex gap-1 radius-1">SYMFONY<img src="img/icon/techno/symfony.png" alt=""></a>
-                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"
-                        rel="noopener noreferrer" class="flex gap-1 radius-1">JAVASCRIPT<img
-                            src="img/icon/techno/js.png" alt=""></a>
-                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer"
-                        class="flex gap-1 radius-1">CSS<img src="img/icon/techno/css.png" alt=""></a>
-                </div>
-            </div>
-            <div class="maquet flex radius-1">
-                <img src="img/digi-3.png" alt="">
-            </div>
-            <ul class="flex radius-1 ">
-                <li><a href="https://github.com/LouisB10/Digi-3" target="_blank" class="flex"><img
-                            src="img/icon/nav/github.png" alt="Icon Github"></a></li>
-                <li><a href="https://design.penpot.app/#/workspace?team-id=b0860443-b67a-81f4-8005-f428ed65bdfc&file-id=31b54c1e-2da2-8001-8005-f9042f12a6b1"
-                        target="_blank" class="flex"><img src="img/icon/techno/penpot.png" alt="Icon Penpot"></a></li>
-            </ul>
+        <div class="techno w-full">
+          <div class="flex-col">
+            <img src="img/icon/techno/html.png" alt="" />
+            <p>HTML</p>
+          </div>
+          <div class="flex-col">
+            <img src="img/icon/techno/css.png" alt="" />
+            <p>CSS</p>
+          </div>
+          <div class="flex-col">
+            <img src="img/icon/techno/js.png" alt="" />
+            <p>JavaScript</p>
+          </div>
+          <div class="flex-col">
+            <img src="img/icon/techno/astro.png" alt="" />
+            <p>Astro</p>
+          </div>
+          <div class="flex-col">
+            <img src="img/icon/techno/symfony.png" alt="" />
+            <p>Symfony</p>
+          </div>
+          <div class="flex-col">
+            <img src="img/icon/techno/postgresql.png" alt="" />
+            <p>PostgreSQL</p>
+          </div>
         </div>
-        <div class="projects container flex-col radius-1 padding-1 gap-1">
-            <div class="title gap-1 flex">
-                <h2>LEBIVOUACQUIFUME</h2>
-                <img src="img/icon/arrow.png" alt="" />
-            </div>
-            <div class="space-b flex gap-1 w-full">
-                <div class="techno gap-1 flex">
-                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"
-                        rel="noopener noreferrer" class="flex gap-1 radius-1">HTML<img src="img/icon/techno/html.png"
-                            alt=""></a>
-                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"
-                        rel="noopener noreferrer" class="flex gap-1 radius-1">JAVASCRIPT<img
-                            src="img/icon/techno/js.png" alt=""></a>
-                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer"
-                        class="flex gap-1 radius-1">CSS<img src="img/icon/techno/css.png" alt=""></a>
-                </div>
-            </div>
-            <div class="maquet flex radius-1">
-                <img src="img/lebivouac.png" alt="">
-            </div>
-            <ul class="flex radius-1 ">
-                <li><a href="https://github.com/LouisB10/LeBivouacQuiFume" target="_blank" class="flex"><img
-                            src="img/icon/nav/github.png" alt="Icon Github"></a></li>
-                <li><a href="https://design.penpot.app/#/workspace?team-id=b0860443-b67a-81f4-8005-f428ed65bdfc&file-id=8bbff9b2-6e25-80c2-8005-f8f74645d74d&page-id=8bbff9b2-6e25-80c2-8005-f8f74736804a"
-                        target="_blank" class="flex"><img src="img/icon/techno/penpot.png" alt="Icon Penpot"></a></li>
-            </ul>
+      </div>
+      <div class="projects container flex-col radius-1 padding-1 gap-1">
+        <div class="title gap-1 flex">
+          <h2>DIGI-3</h2>
+          <img src="img/icon/arrow.png" alt="" />
         </div>
-        <div class="container flex-col radius-1 padding-1 gap-1">
-            <iframe class="container radius-1 " title="deezer-widget"
-                src="https://widget.deezer.com/widget/dark/album/417419737" width="100%" height="150" frameborder="0"
-                allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
+        <div class="space-b flex gap-1 w-full">
+          <div class="techno gap-1 flex">
+            <a
+              href="https://symfony.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="symfony flex gap-1 radius-1"
+              >SYMFONY<img src="img/icon/techno/symfony.png" alt=""
+            /></a>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex gap-1 radius-1"
+              >JAVASCRIPT<img src="img/icon/techno/js.png" alt=""
+            /></a>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex gap-1 radius-1"
+              >CSS<img src="img/icon/techno/css.png" alt=""
+            /></a>
+          </div>
         </div>
-        <div class="form container flex-col radius-1 padding-1 gap-1">
-            <div class="title gap-1 flex">
-                <h2>CONTACT</h2>
-                <img src="img/icon/arrow.png" alt="" />
-            </div>
-            <form action="#" method="POST" class="flex-col gap-1 w-full">
-                <div class="flex-col gap-1 w-full">
-                    <label for="name" class="label">Nom</label>
-                    <input type="text" id="name" name="name" placeholder="Votre nom" required
-                        class="input radius-1 padding-1 w-full">
-                </div>
-                <div class="flex-col gap-1 w-full">
-                    <label for="email" class="label">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Votre email" required
-                        class="input radius-1 padding-1 w-full">
-                </div>
-                <div class="flex-col gap-1 w-full">
-                    <label for="subject" class="label">Sujet</label>
-                    <input type="text" id="subject" name="subject" placeholder="Sujet de votre message" required
-                        class="input radius-1 padding-1 w-full">
-                </div>
-                <div class="flex-col gap-1 w-full">
-                    <label for="message" class="label">Message</label>
-                    <textarea id="message" name="message" rows="4" placeholder="Votre message..." required
-                        class="input radius-1 padding-1 w-full"></textarea>
-                </div>
-                <button type="submit" class="button radius-1 padding-1 w-full">Envoyer</button>
-            </form>
+        <div class="maquet flex radius-1">
+          <img src="img/digi-3.png" alt="" />
         </div>
-        <button id="backToTopBtn" onclick="scrollToTop()" aria-label="button back to top"><img
-                src="img/arrow-backtotop.webp" alt=""></button>
-        <div class="footer-bottom flex-col gap-1 ">
-            <a href="">© 2025 | Tous droits réservés par <span>Louis Bousquet</span></a>
-            <a href="https://www.louisbousquet.fr">Site développé par <span>LB</span></a>
-            <a href="https://bff.ecoindex.fr/redirect/?url=https://www.louisbousquet.fr/" target="_blank"><img
-                    src="https://bff.ecoindex.fr/badge/?theme=dark&url=https://www.louisbousquet.fr/"
-                    alt="Ecoindex Badge" /></a>
-            <div id="wcb" class="carbonbadge wcb-d"></div>
+        <ul class="flex radius-1">
+          <li>
+            <a
+              href="https://github.com/LouisB10/Digi-3"
+              target="_blank"
+              class="flex"
+              ><img src="img/icon/nav/github.png" alt="Icon Github"
+            /></a>
+          </li>
+          <li>
+            <a
+              href="https://design.penpot.app/#/workspace?team-id=b0860443-b67a-81f4-8005-f428ed65bdfc&file-id=31b54c1e-2da2-8001-8005-f9042f12a6b1"
+              target="_blank"
+              class="flex"
+              ><img src="img/icon/techno/penpot.png" alt="Icon Penpot"
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <div class="projects container flex-col radius-1 padding-1 gap-1">
+        <div class="title gap-1 flex">
+          <h2>LEBIVOUACQUIFUME</h2>
+          <img src="img/icon/arrow.png" alt="" />
         </div>
-        <svg id="texture">
-            <filter id="noise">
-                <feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="4" stitchTiles="stitch"></feTurbulence>
-                <feColorMatrix type="saturate" values="0"></feColorMatrix>
-            </filter>
-            <rect width="100%" height="100%" filter="url(#noise)"></rect>
-        </svg>
+        <div class="space-b flex gap-1 w-full">
+          <div class="techno gap-1 flex">
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex gap-1 radius-1"
+              >HTML<img src="img/icon/techno/html.png" alt=""
+            /></a>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex gap-1 radius-1"
+              >JAVASCRIPT<img src="img/icon/techno/js.png" alt=""
+            /></a>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex gap-1 radius-1"
+              >CSS<img src="img/icon/techno/css.png" alt=""
+            /></a>
+          </div>
+        </div>
+        <div class="maquet flex radius-1">
+          <img src="img/lebivouac.png" alt="" />
+        </div>
+        <ul class="flex radius-1">
+          <li>
+            <a
+              href="https://github.com/LouisB10/LeBivouacQuiFume"
+              target="_blank"
+              class="flex"
+              ><img src="img/icon/nav/github.png" alt="Icon Github"
+            /></a>
+          </li>
+          <li>
+            <a
+              href="https://design.penpot.app/#/workspace?team-id=b0860443-b67a-81f4-8005-f428ed65bdfc&file-id=8bbff9b2-6e25-80c2-8005-f8f74645d74d&page-id=8bbff9b2-6e25-80c2-8005-f8f74736804a"
+              target="_blank"
+              class="flex"
+              ><img src="img/icon/techno/penpot.png" alt="Icon Penpot"
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <div class="container flex-col radius-1 padding-1 gap-1">
+        <iframe
+          class="container radius-1"
+          title="deezer-widget"
+          src="https://widget.deezer.com/widget/dark/album/417419737"
+          width="100%"
+          height="150"
+          frameborder="0"
+          allowtransparency="true"
+          allow="encrypted-media; clipboard-write"
+        ></iframe>
+      </div>
+      <div class="form container flex-col radius-1 padding-1 gap-1">
+        <div class="title gap-1 flex">
+          <h2>CONTACT</h2>
+          <img src="img/icon/arrow.png" alt="" />
+        </div>
+        <form id="contactForm" class="flex-col gap-1 w-full">
+          <div class="flex-col gap-1 w-full">
+            <label for="name" class="label">Nom</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Votre nom"
+              required
+              class="input radius-1 padding-1 w-full"
+            />
+            <span class="error-message" id="nameError"></span>
+          </div>
+          <div class="flex-col gap-1 w-full">
+            <label for="email" class="label">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Votre email"
+              required
+              class="input radius-1 padding-1 w-full"
+            />
+            <span class="error-message" id="emailError"></span>
+          </div>
+          <div class="flex-col gap-1 w-full">
+            <label for="subject" class="label">Sujet</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              placeholder="Sujet de votre message"
+              required
+              class="input radius-1 padding-1 w-full"
+            />
+            <span class="error-message" id="subjectError"></span>
+          </div>
+          <div class="flex-col gap-1 w-full">
+            <label for="message" class="label">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Votre message..."
+              required
+              class="input radius-1 padding-1 w-full"
+            ></textarea>
+            <span class="error-message" id="messageError"></span>
+          </div>
+          <button
+            type="submit"
+            id="submitBtn"
+            class="button radius-1 padding-1 w-full"
+          >
+            Envoyer
+          </button>
+          <div id="formStatus" class="form-status"></div>
+        </form>
+      </div>
+      <button
+        id="backToTopBtn"
+        onclick="scrollToTop()"
+        aria-label="button back to top"
+      >
+        <img src="img/arrow-backtotop.webp" alt="" />
+      </button>
+      <div class="footer-bottom flex-col gap-1">
+        <a href=""
+          >© 2025 | Tous droits réservés par <span>Louis Bousquet</span></a
+        >
+        <a href="https://www.louisbousquet.fr"
+          >Site développé par <span>LB</span></a
+        >
+        <a
+          href="https://bff.ecoindex.fr/redirect/?url=https://www.louisbousquet.fr/"
+          target="_blank"
+          ><img
+            src="https://bff.ecoindex.fr/badge/?theme=dark&url=https://www.louisbousquet.fr/"
+            alt="Ecoindex Badge"
+        /></a>
+        <div id="wcb" class="carbonbadge wcb-d"></div>
+      </div>
+      <svg id="texture">
+        <filter id="noise">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency=".8"
+            numOctaves="4"
+            stitchTiles="stitch"
+          ></feTurbulence>
+          <feColorMatrix type="saturate" values="0"></feColorMatrix>
+        </filter>
+        <rect width="100%" height="100%" filter="url(#noise)"></rect>
+      </svg>
     </section>
-    <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
-</body>
-
+    <script
+      src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js"
+      defer
+    ></script>
+    <script src="script.js"></script>
+  </body>
 </html>
