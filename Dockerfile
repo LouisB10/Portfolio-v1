@@ -13,4 +13,3 @@ RUN /usr/local/bin/generate-ssl.sh
 EXPOSE 443
 
 CMD ["nginx", "-g", "daemon off;"]
-#test#
