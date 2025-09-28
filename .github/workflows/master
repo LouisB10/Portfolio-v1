@@ -1,0 +1,28 @@
+name: CI MASTER
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    name: Build & Push & Restart
+    runs-on: self-hosted
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Build Docker image nginx:alpine
+        run: |
+          buildah build -t victor54454/portfolio-louis:latest -f Dockerfile .
+        continue-on-error: false
+      - name: Login to DockerHub
+        run: |
+          echo "${{ secrets.DOCKERHUB_PASSWORD }}" | buildah login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin docker.io
+        continue-on-error: false
+      - name: Push Docker image to DockerHub
+        run: |
+          buildah push victor54454/portfolio-louis:latest
+        continue-on-error: false
+      - name: Restart Kubernetes Deployment
+        run: |
+          kubectl rollout restart deployment portfolio-deployment -n portfolio-louis
+        continue-on-error: false
