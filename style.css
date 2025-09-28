@@ -299,13 +299,13 @@ ul li a img {
   padding: 5px;
   border: 1px solid var(--d);
   background-color: var(--d-cp);
-  transition: 0.3sec all ease-in-out;
+  transition: 0.3s all ease-in-out;
   font-size: 12px;
   color: var(--w-c);
 }
 
 .techno a:hover {
-  color: var(--c);
+  color: var(--w);
 }
 
 .techno a img {
@@ -366,6 +366,89 @@ ul li a img {
 /* 
 	  ================= FORM =================
 */
+
+/* Styles du formulaire */
+.input {
+  background-color: var(--d-cp);
+  border: 1px solid var(--d-cm);
+  color: var(--w);
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+  resize: vertical;
+}
+
+.input:focus {
+  border-color: var(--cb);
+  box-shadow: 0 0 10px var(--cb-cp);
+}
+
+.input.error {
+  border-color: var(--r);
+  box-shadow: 0 0 10px var(--r-cp);
+}
+
+.label {
+  color: var(--w-c);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.button {
+  background: linear-gradient(135deg, var(--r), var(--cb));
+  border: none;
+  color: var(--w);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px var(--r-cm);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Messages d'erreur */
+.error-message {
+  color: var(--r);
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  display: none;
+}
+
+/* Statut du formulaire */
+.form-status {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: 500;
+  display: none;
+}
+
+.form-status.success {
+  background-color: var(--g-cp);
+  border: 1px solid var(--g-cm);
+  color: var(--g);
+}
+
+.form-status.error {
+  background-color: var(--r-cp);
+  border: 1px solid var(--r-cm);
+  color: var(--r);
+}
 /* 
 	  ================= BACK-TO-TOP =================
 */
@@ -374,7 +457,7 @@ ul li a img {
   width: 45px;
   display: none;
   position: fixed;
-  align-self: flex-end;
+  right: 15px;
   bottom: 85px;
   background-color: var(--g);
   border: none;
@@ -382,7 +465,8 @@ ul li a img {
   cursor: pointer;
   box-shadow: 0px 0px 4px 0px var(--g-c);
   transition: all 0.1s ease-in-out;
-  margin-right: 15px;
+  z-index: 1000; 
+
 }
 #backToTopBtn:hover {
   background-color: var(--g-cp);
