@@ -20,12 +20,6 @@
     <meta name="referrer" content="no-referrer" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
 
-    <!-- Permissions Policy pour éviter les erreurs de capteurs -->
-    <meta
-      http-equiv="Permissions-Policy"
-      content="accelerometer=(), gyroscope=(), magnetometer=(), camera=(), microphone=(), geolocation=()"
-    />
-
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -70,285 +64,305 @@
       property="og:description"
       content="Portfolio développeur web, Louis Bousquet étudiant à Epitech"
     />
-    <meta property="og:website" content="https://www.louisbousquet.fr/" />
+    <meta property="og:url" content="https://louisbousquet.orktk.fr/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://louisbousquet.orktk.fr/img/pdp.jpg" />
     <!-- Ajouter EmailJS SDK dans le head -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   </head>
 
   <body>
-    {# <div></div> #}
     <section class="w-full gap-1">
       <div class="profil container flex radius-1 padding-1">
-        <img src="img/pdp.jpg" alt="" class="logo radius-1" />
+        <img src="img/pdp.jpg" alt="Photo de profil de Louis Bousquet, développeur web" class="logo radius-1" />
         <div class="navbar flex-col gap-1">
           <div class="flex-col">
-            <p>LOUIS BOUSQUET</p>
+            <h1>LOUIS BOUSQUET</h1>
             <p>WEB DEVELOPER</p>
           </div>
-          <ul class="flex radius-1">
-            <li>
-              <a href="img/cv.pdf" target="_blank" class="cv flex"
-                ><img src="img/icon/nav/cv.png" alt="Icon CV"
+          <ul class="flex radius-1" role="list">
+            <li role="listitem">
+              <a href="img/cv.pdf" target="_blank" class="cv flex" aria-label="Télécharger le CV de Louis Bousquet"
+                ><img src="img/icon/nav/cv.png" alt="Icône CV"
               /></a>
             </li>
-            <li>
+            <li role="listitem">
               <a
                 href="mailto:louisbousquet13@gmail.com"
                 target="_blank"
                 class="flex"
-                ><img src="img/icon/nav/email.png" alt="Icon E-mail"
+                aria-label="Envoyer un email à Louis Bousquet"
+                ><img src="img/icon/nav/email.png" alt="Icône Email"
               /></a>
             </li>
-            <li>
-              <a href="https://github.com/LouisB10" target="_blank" class="flex"
-                ><img src="img/icon/nav/github.png" alt="Icon Github"
+            <li role="listitem">
+              <a href="https://github.com/LouisB10" target="_blank" class="flex" aria-label="Voir le profil GitHub de Louis Bousquet"
+                ><img src="img/icon/nav/github.png" alt="Icône GitHub"
               /></a>
             </li>
-            <li>
+            <li role="listitem">
               <a
                 href="https://www.linkedin.com/in/louis-bousquet-7077aa281/"
                 target="_blank"
                 class="flex"
-                ><img src="img/icon/nav/linkedin.png" alt="Icon Linkedin"
+                aria-label="Voir le profil LinkedIn de Louis Bousquet"
+                ><img src="img/icon/nav/linkedin.png" alt="Icône LinkedIn"
               /></a>
             </li>
           </ul>
         </div>
       </div>
-      <div class="skills container flex-col radius-1 padding-1">
+      <div class="skills container flex-col radius-1 padding-1" aria-labelledby="skills-title">
         <div class="title gap-1 flex">
-          <h2>SKILLS</h2>
-          <img src="img/icon/arrow.png" alt="" />
+          <h2 id="skills-title">SKILLS</h2>
+          <img src="img/icon/arrow.png" alt="Icône flèche décorative" aria-hidden="true" />
         </div>
-        <div class="techno w-full">
-          <div class="flex-col">
-            <img src="img/icon/techno/html.png" alt="" />
+        <div class="techno w-full" role="list" aria-label="Technologies maîtrisées">
+          <div class="flex-col" role="listitem">
+            <img src="img/icon/techno/html.png" alt="Logo HTML5" />
             <p>HTML</p>
           </div>
-          <div class="flex-col">
-            <img src="img/icon/techno/css.png" alt="" />
+          <div class="flex-col" role="listitem">
+            <img src="img/icon/techno/css.png" alt="Logo CSS3" />
             <p>CSS</p>
           </div>
-          <div class="flex-col">
-            <img src="img/icon/techno/js.png" alt="" />
+          <div class="flex-col" role="listitem">
+            <img src="img/icon/techno/js.png" alt="Logo JavaScript" />
             <p>JavaScript</p>
           </div>
-          <div class="flex-col">
-            <img src="img/icon/techno/astro.png" alt="" />
+          <div class="flex-col" role="listitem">
+            <img src="img/icon/techno/astro.png" alt="Logo Astro" />
             <p>Astro</p>
           </div>
-          <div class="flex-col">
-            <img src="img/icon/techno/symfony.png" alt="" />
+          <div class="flex-col" role="listitem">
+            <img src="img/icon/techno/symfony.png" alt="Logo Symfony" />
             <p>Symfony</p>
           </div>
-          <div class="flex-col">
-            <img src="img/icon/techno/postgresql.png" alt="" />
+          <div class="flex-col" role="listitem">
+            <img src="img/icon/techno/postgresql.png" alt="Logo PostgreSQL" />
             <p>PostgreSQL</p>
           </div>
         </div>
       </div>
-      <div class="projects container flex-col radius-1 padding-1 gap-1">
+      <div class="projects container flex-col radius-1 padding-1 gap-1" aria-labelledby="digi3-title">
         <div class="title gap-1 flex">
-          <h2>DIGI-3</h2>
-          <img src="img/icon/arrow.png" alt="" />
+          <h2 id="digi3-title">DIGI-3</h2>
+          <img src="img/icon/arrow.png" alt="Icône flèche décorative" aria-hidden="true" />
         </div>
         <div class="space-b flex gap-1 w-full">
-          <div class="techno gap-1 flex">
+          <div class="techno gap-1 flex" role="list" aria-label="Technologies utilisées pour DIGI-3">
             <a
               href="https://symfony.com"
               target="_blank"
               rel="noopener noreferrer"
               class="symfony flex gap-1 radius-1"
-              >SYMFONY<img src="img/icon/techno/symfony.png" alt=""
+              aria-label="En savoir plus sur Symfony"
+              >SYMFONY<img src="img/icon/techno/symfony.png" alt="Logo Symfony" aria-hidden="true"
             /></a>
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
               target="_blank"
               rel="noopener noreferrer"
               class="flex gap-1 radius-1"
-              >JAVASCRIPT<img src="img/icon/techno/js.png" alt=""
+              aria-label="En savoir plus sur JavaScript"
+              >JAVASCRIPT<img src="img/icon/techno/js.png" alt="Logo JavaScript" aria-hidden="true"
             /></a>
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS"
               target="_blank"
               rel="noopener noreferrer"
               class="flex gap-1 radius-1"
-              >CSS<img src="img/icon/techno/css.png" alt=""
+              aria-label="En savoir plus sur CSS"
+              >CSS<img src="img/icon/techno/css.png" alt="Logo CSS3" aria-hidden="true"
             /></a>
           </div>
         </div>
         <div class="maquet flex radius-1">
-          <img src="img/digi-3.png" alt="" />
+          <img src="img/digi-3.png" alt="Capture d'écran du projet DIGI-3" />
         </div>
-        <ul class="flex radius-1">
-          <li>
+        <ul class="flex radius-1" role="list" aria-label="Liens du projet DIGI-3">
+          <li role="listitem">
             <a
               href="https://github.com/LouisB10/Digi-3"
               target="_blank"
               class="flex"
-              ><img src="img/icon/nav/github.png" alt="Icon Github"
+              aria-label="Voir le code source du projet DIGI-3 sur GitHub"
+              ><img src="img/icon/nav/github.png" alt="Icône GitHub"
             /></a>
           </li>
-          <li>
+          <li role="listitem">
             <a
               href="https://design.penpot.app/#/workspace?team-id=b0860443-b67a-81f4-8005-f428ed65bdfc&file-id=31b54c1e-2da2-8001-8005-f9042f12a6b1"
               target="_blank"
               class="flex"
-              ><img src="img/icon/techno/penpot.png" alt="Icon Penpot"
+              aria-label="Voir le design du projet DIGI-3 sur Penpot"
+              ><img src="img/icon/techno/penpot.png" alt="Icône Penpot"
             /></a>
           </li>
         </ul>
       </div>
-      <div class="projects container flex-col radius-1 padding-1 gap-1">
+      <div class="projects container flex-col radius-1 padding-1 gap-1" aria-labelledby="lebivouac-title">
         <div class="title gap-1 flex">
-          <h2>LEBIVOUACQUIFUME</h2>
-          <img src="img/icon/arrow.png" alt="" />
+          <h2 id="lebivouac-title">LEBIVOUACQUIFUME</h2>
+          <img src="img/icon/arrow.png" alt="Icône flèche décorative" aria-hidden="true" />
         </div>
         <div class="space-b flex gap-1 w-full">
-          <div class="techno gap-1 flex">
+          <div class="techno gap-1 flex" role="list" aria-label="Technologies utilisées pour LeBivouacQuiFume">
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/HTML"
               target="_blank"
               rel="noopener noreferrer"
               class="flex gap-1 radius-1"
-              >HTML<img src="img/icon/techno/html.png" alt=""
+              aria-label="En savoir plus sur HTML"
+              >HTML<img src="img/icon/techno/html.png" alt="Logo HTML5" aria-hidden="true"
             /></a>
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
               target="_blank"
               rel="noopener noreferrer"
               class="flex gap-1 radius-1"
-              >JAVASCRIPT<img src="img/icon/techno/js.png" alt=""
+              aria-label="En savoir plus sur JavaScript"
+              >JAVASCRIPT<img src="img/icon/techno/js.png" alt="Logo JavaScript" aria-hidden="true"
             /></a>
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS"
               target="_blank"
               rel="noopener noreferrer"
               class="flex gap-1 radius-1"
-              >CSS<img src="img/icon/techno/css.png" alt=""
+              aria-label="En savoir plus sur CSS"
+              >CSS<img src="img/icon/techno/css.png" alt="Logo CSS3" aria-hidden="true"
             /></a>
           </div>
         </div>
         <div class="maquet flex radius-1">
-          <img src="img/lebivouac.png" alt="" />
+          <img src="img/lebivouac.png" alt="Capture d'écran du projet LeBivouacQuiFume" />
         </div>
-        <ul class="flex radius-1">
-          <li>
+        <ul class="flex radius-1" role="list" aria-label="Liens du projet LeBivouacQuiFume">
+          <li role="listitem">
             <a
               href="https://github.com/LouisB10/LeBivouacQuiFume"
               target="_blank"
               class="flex"
-              ><img src="img/icon/nav/github.png" alt="Icon Github"
+              aria-label="Voir le code source du projet LeBivouacQuiFume sur GitHub"
+              ><img src="img/icon/nav/github.png" alt="Icône GitHub"
             /></a>
           </li>
-          <li>
+          <li role="listitem">
             <a
               href="https://design.penpot.app/#/workspace?team-id=b0860443-b67a-81f4-8005-f428ed65bdfc&file-id=8bbff9b2-6e25-80c2-8005-f8f74645d74d&page-id=8bbff9b2-6e25-80c2-8005-f8f74736804a"
               target="_blank"
               class="flex"
-              ><img src="img/icon/techno/penpot.png" alt="Icon Penpot"
+              aria-label="Voir le design du projet LeBivouacQuiFume sur Penpot"
+              ><img src="img/icon/techno/penpot.png" alt="Icône Penpot"
             /></a>
           </li>
         </ul>
       </div>
-      <div class="container flex-col radius-1 padding-1 gap-1">
+      <div class="container flex-col radius-1 padding-1 gap-1" aria-label="Widget musical Deezer">
         <iframe
-          class="container radius-1"
-          title="deezer-widget"
+          class="border radius-1 w-full"
+          title="Widget musical Deezer - Album sélectionné"
           src="https://widget.deezer.com/widget/dark/album/417419737"
-          width="100%"
+          width="100"
           height="150"
-          frameborder="0"
-          allowtransparency="true"
           allow="encrypted-media; clipboard-write"
+          aria-label="Lecteur musical Deezer"
         ></iframe>
       </div>
-      <div class="form container flex-col radius-1 padding-1 gap-1">
+      <div class="form container flex-col radius-1 padding-1 gap-1" aria-labelledby="contact-title">
         <div class="title gap-1 flex">
-          <h2>CONTACT</h2>
-          <img src="img/icon/arrow.png" alt="" />
+          <h2 id="contact-title">CONTACT</h2>
+          <img src="img/icon/arrow.png" alt="Icône flèche décorative" aria-hidden="true" />
         </div>
-        <form id="contactForm" class="flex-col gap-1 w-full">
+        <form id="contactForm" class="flex-col gap-1 w-full" aria-label="Formulaire de contact" novalidate>
           <div class="flex-col gap-1 w-full">
-            <label for="name" class="label">Nom</label>
+            <label for="name" class="label">Nom *</label>
             <input
               type="text"
               id="name"
               name="name"
               placeholder="Votre nom"
               required
-              class="input radius-1 padding-1 w-full"
+              class="input radius-1  w-full"
+              aria-describedby="nameError"
+              aria-required="true"
             />
-            <span class="error-message" id="nameError"></span>
+            <span class="error-message" id="nameError" role="alert" aria-live="polite"></span>
           </div>
           <div class="flex-col gap-1 w-full">
-            <label for="email" class="label">Email</label>
+            <label for="email" class="label">Email *</label>
             <input
               type="email"
               id="email"
               name="email"
               placeholder="Votre email"
               required
-              class="input radius-1 padding-1 w-full"
+              class="input radius-1  w-full"
+              aria-describedby="emailError"
+              aria-required="true"
             />
-            <span class="error-message" id="emailError"></span>
+            <span class="error-message" id="emailError" role="alert" aria-live="polite"></span>
           </div>
           <div class="flex-col gap-1 w-full">
-            <label for="subject" class="label">Sujet</label>
+            <label for="subject" class="label">Sujet *</label>
             <input
               type="text"
               id="subject"
               name="subject"
               placeholder="Sujet de votre message"
               required
-              class="input radius-1 padding-1 w-full"
+              class="input radius-1  w-full"
+              aria-describedby="subjectError"
+              aria-required="true"
             />
-            <span class="error-message" id="subjectError"></span>
+            <span class="error-message" id="subjectError" role="alert" aria-live="polite"></span>
           </div>
           <div class="flex-col gap-1 w-full">
-            <label for="message" class="label">Message</label>
+            <label for="message" class="label">Message *</label>
             <textarea
               id="message"
               name="message"
               rows="4"
               placeholder="Votre message..."
               required
-              class="input radius-1 padding-1 w-full"
+              class="input radius-1  w-full"
+              aria-describedby="messageError"
+              aria-required="true"
             ></textarea>
-            <span class="error-message" id="messageError"></span>
+            <span class="error-message" id="messageError" role="alert" aria-live="polite"></span>
           </div>
           <button
             type="submit"
             id="submitBtn"
-            class="button radius-1 padding-1 w-full"
+            class="button radius-1  w-full"
+            aria-describedby="formStatus"
           >
             Envoyer
           </button>
-          <div id="formStatus" class="form-status"></div>
+          <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
         </form>
       </div>
       <button
         id="backToTopBtn"
         onclick="scrollToTop()"
-        aria-label="button back to top"
+        aria-label="Retour en haut de la page"
+        title="Retour en haut de la page"
       >
-        <img src="img/arrow-backtotop.webp" alt="" />
+        <img src="img/arrow-backtotop.webp" alt="Icône flèche vers le haut" aria-hidden="true" />
       </button>
-      <div class="footer-bottom flex-col gap-1">
+      <div class="footer-bottom flex-col gap-1" aria-label="Pied de page">
         <a href=""
           >© 2025 | Tous droits réservés par <span>Louis Bousquet</span></a
         >
-        <a href="https://www.louisbousquet.fr"
-          >Site développé par <span>LB</span></a
-        >
         <a
-          href="https://bff.ecoindex.fr/redirect/?url=https://www.louisbousquet.fr/"
+          href="https://bff.ecoindex.fr/redirect/?url=https://louisbousquet.orktk.fr/"
           target="_blank"
+          aria-label="Voir l'analyse EcoIndex du site"
           ><img
-            src="https://bff.ecoindex.fr/badge/?theme=dark&url=https://www.louisbousquet.fr/"
-            alt="Ecoindex Badge"
+            src="https://bff.ecoindex.fr/badge/?theme=dark&url=https://louisbousquet.orktk.fr/"
+            alt="Badge EcoIndex - Score d'impact environnemental du site"
         /></a>
-        <div id="wcb" class="carbonbadge wcb-d"></div>
+        <div id="wcb" class="carbonbadge wcb-d" aria-label="Badge Website Carbon - Impact carbone du site"></div>
       </div>
       <svg id="texture">
         <filter id="noise">
@@ -367,6 +381,7 @@
       src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js"
       defer
     ></script>
+    <script src="config.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

@@ -3,7 +3,7 @@
 Mon portfolio en ligne mettant en avant mes compétences, projets et expériences en tant que développeur web.
 
 ## 🌐 Site web
-- [louisbousquet.fr](https://www.louisbousquet.fr)
+- [louisbousquet.fr](https://www.louisbousquet.orktk.fr)
 
 ## 📝 Description
 Ce portfolio est une vitrine interactive de mes réalisations et compétences en développement web. 

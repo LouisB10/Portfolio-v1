@@ -42,7 +42,11 @@ html {
   --g-cm: rgba(43, 131, 47, 0.5);
   --g-cp: rgba(43, 131, 47, 0.15);
 
-  --dl-bg: linear-gradient(90deg, rgba(10, 36, 99, 0.2) 0%, rgba(62, 146, 204, 0.2) 100%);
+  --dl-bg: linear-gradient(
+    90deg,
+    rgba(10, 36, 99, 0.2) 0%,
+    rgba(62, 146, 204, 0.2) 100%
+  );
 }
 
 * {
@@ -54,7 +58,6 @@ html {
   overflow-x: hidden;
   font-weight: 400;
   color: var(--w);
-
 }
 
 #texture {
@@ -76,7 +79,6 @@ body {
   background-position: center top, center bottom;
   background-size: 1400px;
   background-color: var(--bg);
-
 }
 
 .flex-col {
@@ -127,9 +129,11 @@ body {
 .h-full {
   height: 100%;
 }
-
-h2 {
-  font-size: 3rem;
+.border {
+  border: 1px solid var(--d-cm);
+}
+h1 {
+  font-size: 1.5rem;
 }
 
 p,
@@ -137,7 +141,8 @@ h2 {
   cursor: default;
 }
 
-div,a {
+div,
+a {
   overflow-y: hidden;
 }
 
@@ -163,13 +168,10 @@ section {
 */
 .title {
   align-self: baseline;
-  padding: 0 5px;
 }
-
 .title h2 {
   font-size: 1.5rem;
 }
-
 .title img {
   height: 1rem;
   transition: 0.4s all ease;
@@ -204,6 +206,7 @@ section {
 
 .profil div p:first-of-type:hover {
   background: linear-gradient(135deg, var(--r), var(--cb));
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 400;
@@ -219,7 +222,6 @@ section {
   color: var(--w-cm);
 }
 
-
 ul {
   gap: 5px;
   border: 1px solid var(--w-cp);
@@ -234,17 +236,13 @@ ul li {
 }
 
 .cv {
-  background-image: linear-gradient(135deg,
-      var(--r),
-      var(--cb));
+  background-image: linear-gradient(135deg, var(--r), var(--cb));
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .cv:hover {
-  background-image: linear-gradient(35deg,
-      var(--cb),
-      var(--bl));
+  background-image: linear-gradient(35deg, var(--cb), var(--bl));
 }
 
 ul li a {
@@ -359,7 +357,7 @@ ul li a img {
   align-items: flex-start;
 }
 
-.maquet img{
+.maquet img {
   width: 100%;
 }
 
@@ -367,6 +365,11 @@ ul li a img {
 	  ================= FORM =================
 */
 
+.input,
+.label,
+.button {
+  padding: 1rem 0;
+}
 /* Styles du formulaire */
 .input {
   background-color: var(--d-cp);
@@ -465,8 +468,7 @@ ul li a img {
   cursor: pointer;
   box-shadow: 0px 0px 4px 0px var(--g-c);
   transition: all 0.1s ease-in-out;
-  z-index: 1000; 
-
+  z-index: 1000;
 }
 #backToTopBtn:hover {
   background-color: var(--g-cp);
@@ -504,7 +506,108 @@ ul li a img {
 	  ================= RESPONSIVE =================
 */
 
-@media (max-width:375px) {
+/* Tablettes (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .title h2 {
+    font-size: 2rem;
+  }
+  .title img {
+    height: 1.5rem;
+  }
+  .logo {
+    height: 8rem;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: inherit;
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+  .profil div p:last-of-type {
+    font-size: 1.5rem;
+  }
+  .profil ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .profil ul li, .profil ul li a{
+    height: 50px;
+    width: 50px;
+  }
+.profil ul li a img{
+  height: 35px;
+}
+  .techno {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .techno div {
+    display: flex;
+    align-items: center;
+  }
+  .techno img {
+    height: 3rem;
+  }
+  .techno p {
+    font-size: 1.2rem;
+  }
+  .techno a {
+    font-size: 1.5rem;
+    border-radius: 1.5rem;
+    padding: 0.5rem;
+  }
+  .techno a img {
+    height: 2rem;
+  }
+
+  .projects ul {
+    width: 25%;
+  }
+  .projects ul li {
+    height: 4rem;
+    width: 50%;
+  }
+  .projects ul li a {
+    height: 4rem;
+  }
+  .projects ul li a img {
+    height: 3rem;
+  }
+
+  .label,
+  .input,
+  .button,
+  .error-message {
+    font-size: 1.5rem;
+  }
+  .footer-bottom {
+    width: 75%;
+  }
+  .footer-bottom a {
+    font-size: 1rem;
+  }
+
+  #backToTopBtn {
+    right: 20px;
+    bottom: 20px;
+    height: 50px;
+    width: 50px;
+  }
+
+  #backToTopBtn img {
+    height: 40px;
+  }
+}
+
+@media (max-width: 375px) {
+  h1,
+  .title h2 {
+    font-size: 1.2rem;
+  }
+
   .profil div p:first-of-type {
     font-size: 1rem;
   }
@@ -519,5 +622,8 @@ ul li a img {
 
   ul li a {
     height: 30px;
+  }
+  .techno a {
+    font-size: 8px;
   }
 }
