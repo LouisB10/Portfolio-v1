@@ -9,7 +9,7 @@ emailjs.init(EMAILJS_PUBLIC_KEY);
 
 document.addEventListener("DOMContentLoaded", function() {
   // DEEZER ALBUM ROTATION
-  initDeezerRotation();
+  // initDeezerRotation();
 
   // BUTTON BACK TO TOP
   const backToTopBtn = document.getElementById("backToTopBtn");
@@ -202,12 +202,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // FONCTION POUR FAIRE TOURNER LES ALBUMS DEEZER AUTOMATIQUEMENT
 function initDeezerRotation() {
-  // Liste des 3 albums
-  const albums = [
-    { id: '417419737', title: '23 - Jolagreen23' }, // Album déjà présent
-    { id: '517170832', title: 'RECHERCHE&DESTRUCTION - Jolagreen23' },
-    { id: '654365611', title: '+99XP - Jolagreen23' }
-  ];
+  // Liste des IDs d'albums
+  const albumIds = ['417419737', '517170832', '654365611'];
 
   let currentAlbumIndex = 0;
   const widget = document.querySelector('iframe[src*="widget.deezer.com"]');
@@ -220,17 +216,12 @@ function initDeezerRotation() {
   // Fonction pour changer d'album
   function changeAlbum(index) {
     currentAlbumIndex = index;
-    const album = albums[currentAlbumIndex];
-    
-    // Mettre à jour l'iframe
-    widget.src = `https://widget.deezer.com/widget/dark/album/${album.id}`;
-    
-    console.log(`Album changé: ${album.title}`);
+    widget.src = `https://widget.deezer.com/widget/dark/album/${albumIds[currentAlbumIndex]}`;
   }
 
   // Rotation automatique toutes les 7.5 secondes
   setInterval(() => {
-    const nextIndex = (currentAlbumIndex + 1) % albums.length;
+    const nextIndex = (currentAlbumIndex + 1) % albumIds.length;
     changeAlbum(nextIndex);
   }, 7500);
 
