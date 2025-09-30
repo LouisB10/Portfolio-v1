@@ -1,16 +1,10 @@
 // script.js
-// CONFIGURATION EMAILJS - Utilise les variables de config.js
-const EMAILJS_SERVICE_ID = window.EMAILJS_CONFIG.SERVICE_ID;
-const EMAILJS_TEMPLATE_ID = window.EMAILJS_CONFIG.TEMPLATE_ID;
-const EMAILJS_PUBLIC_KEY = window.EMAILJS_CONFIG.PUBLIC_KEY;
+// Les configurations EmailJS viennent maintenant de config.js (monté via Kubernetes Secret)
 
-// Initialiser EmailJS
-emailjs.init(EMAILJS_PUBLIC_KEY);
+// Initialiser EmailJS avec la clé du config
+emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
 
 document.addEventListener("DOMContentLoaded", function() {
-  // DEEZER ALBUM ROTATION
-  // initDeezerRotation();
-
   // BUTTON BACK TO TOP
   const backToTopBtn = document.getElementById("backToTopBtn");
 
@@ -166,13 +160,10 @@ document.addEventListener("DOMContentLoaded", function() {
         to_name: 'Louis Bousquet'
       };
 
-      // console.log('Envoi des données:', formData); // Debug - commenté
-      // console.log('Réponse EmailJS:', response); // Debug - commenté
-
-      // Envoyer l'email via EmailJS
+      // Envoyer l'email via EmailJS avec les configs depuis config.js
       const response = await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.TEMPLATE_ID,
         formData
       );
 
@@ -199,32 +190,3 @@ document.addEventListener("DOMContentLoaded", function() {
     formStatus.style.display = message ? 'block' : 'none';
   }
 });
-
-// FONCTION POUR FAIRE TOURNER LES ALBUMS DEEZER AUTOMATIQUEMENT
-function initDeezerRotation() {
-  // Liste des IDs d'albums
-  const albumIds = ['417419737', '517170832', '654365611'];
-
-  let currentAlbumIndex = 0;
-  const widget = document.querySelector('iframe[src*="widget.deezer.com"]');
-
-  if (!widget) {
-    console.warn('Widget Deezer non trouvé');
-    return;
-  }
-
-  // Fonction pour changer d'album
-  function changeAlbum(index) {
-    currentAlbumIndex = index;
-    widget.src = `https://widget.deezer.com/widget/dark/album/${albumIds[currentAlbumIndex]}`;
-  }
-
-  // Rotation automatique toutes les 7.5 secondes
-  setInterval(() => {
-    const nextIndex = (currentAlbumIndex + 1) % albumIds.length;
-    changeAlbum(nextIndex);
-  }, 7500);
-
-  // Initialiser avec le premier album
-  changeAlbum(0);
-}
