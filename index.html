@@ -19,9 +19,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="referrer" content="no-referrer" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-    
+
     <!-- Permissions Policy conforme W3C pour bloquer tous les capteurs -->
-    <meta http-equiv="Permissions-Policy" content="accelerometer=(), gyroscope=(), magnetometer=(), camera=(), microphone=(), geolocation=(), deviceorientation=(), devicemotion=(), autoplay=(), fullscreen=(), payment=(), usb=(), serial=(), bluetooth=(), midi=(), encrypted-media=(), picture-in-picture=()" />
+    <meta
+      http-equiv="Permissions-Policy"
+      content="accelerometer=(), gyroscope=(), magnetometer=(), camera=(), microphone=(), geolocation=(), deviceorientation=(), devicemotion=(), autoplay=(), fullscreen=(), payment=(), usb=(), serial=(), bluetooth=(), midi=(), encrypted-media=(), picture-in-picture=()"
+    />
 
     <link rel="stylesheet" href="style.css" />
     <!-- Favicon -->
@@ -63,7 +66,10 @@
     />
     <meta property="og:url" content="https://louisbousquet.orktk.fr/" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://louisbousquet.orktk.fr/img/pdp.webp" />
+    <meta
+      property="og:image"
+      content="https://louisbousquet.orktk.fr/img/pdp.webp"
+    />
     <!-- Ajouter EmailJS SDK dans le head -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   </head>
@@ -71,7 +77,11 @@
   <body>
     <section class="w-full gap-1">
       <div class="profil container flex radius-1 padding-1">
-        <img src="img/pdp.webp" alt="Photo de profil de Louis Bousquet, développeur web" class="logo radius-1" />
+        <img
+          src="img/pdp.webp"
+          alt="Photo de profil de Louis Bousquet, développeur web"
+          class="logo radius-1"
+        />
         <div class="navbar flex-col gap-1">
           <div class="flex-col">
             <h1>LOUIS BOUSQUET</h1>
@@ -79,7 +89,11 @@
           </div>
           <ul class="flex radius-1" role="list">
             <li role="listitem">
-              <a href="img/cv.pdf" target="_blank" class="cv flex" aria-label="Télécharger le CV de Louis Bousquet"
+              <a
+                href="img/cv.pdf"
+                target="_blank"
+                class="cv flex"
+                aria-label="Télécharger le CV de Louis Bousquet"
                 ><img src="img/icon/nav/cv.webp" alt="Icône CV"
               /></a>
             </li>
@@ -93,7 +107,11 @@
               /></a>
             </li>
             <li role="listitem">
-              <a href="https://github.com/LouisB10" target="_blank" class="flex" aria-label="Voir le profil GitHub de Louis Bousquet"
+              <a
+                href="https://github.com/LouisB10"
+                target="_blank"
+                class="flex"
+                aria-label="Voir le profil GitHub de Louis Bousquet"
                 ><img src="img/icon/nav/github.webp" alt="Icône GitHub"
               /></a>
             </li>
@@ -109,12 +127,23 @@
           </ul>
         </div>
       </div>
-      <div class="skills container flex-col radius-1 padding-1" aria-labelledby="skills-title">
+      <div
+        class="skills container flex-col radius-1 padding-1"
+        aria-labelledby="skills-title"
+      >
         <div class="title gap-1 flex">
           <h2 id="skills-title">SKILLS</h2>
-          <img src="img/icon/arrow.webp" alt="Icône flèche décorative" aria-hidden="true" />
+          <img
+            src="img/icon/arrow.webp"
+            alt="Icône flèche décorative"
+            aria-hidden="true"
+          />
         </div>
-        <div class="techno w-full" role="list" aria-label="Technologies maîtrisées">
+        <div
+          class="techno w-full"
+          role="list"
+          aria-label="Technologies maîtrisées"
+        >
           <div class="flex-col" role="listitem">
             <img src="img/icon/techno/html.webp" alt="Logo HTML5" />
             <p>HTML</p>
@@ -141,20 +170,34 @@
           </div>
         </div>
       </div>
-      <div class="projects container flex-col radius-1 padding-1 gap-1" aria-labelledby="digi3-title">
+      <div
+        class="projects container flex-col radius-1 padding-1 gap-1"
+        aria-labelledby="digi3-title"
+      >
         <div class="title gap-1 flex">
           <h2 id="digi3-title">DIGI-3</h2>
-          <img src="img/icon/arrow.webp" alt="Icône flèche décorative" aria-hidden="true" />
+          <img
+            src="img/icon/arrow.webp"
+            alt="Icône flèche décorative"
+            aria-hidden="true"
+          />
         </div>
         <div class="space-b flex gap-1 w-full">
-          <div class="techno gap-1 flex" role="list" aria-label="Technologies utilisées pour DIGI-3">
+          <div
+            class="techno gap-1 flex"
+            role="list"
+            aria-label="Technologies utilisées pour DIGI-3"
+          >
             <a
               href="https://symfony.com"
               target="_blank"
               rel="noopener noreferrer"
               class="symfony flex gap-1 radius-1"
               aria-label="En savoir plus sur Symfony"
-              >SYMFONY<img src="img/icon/techno/symfony.webp" alt="Logo Symfony" aria-hidden="true"
+              >SYMFONY<img
+                src="img/icon/techno/symfony.webp"
+                alt="Logo Symfony"
+                aria-hidden="true"
             /></a>
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
@@ -162,7 +205,10 @@
               rel="noopener noreferrer"
               class="flex gap-1 radius-1"
               aria-label="En savoir plus sur JavaScript"
-              >JAVASCRIPT<img src="img/icon/techno/js.webp" alt="Logo JavaScript" aria-hidden="true"
+              >JAVASCRIPT<img
+                src="img/icon/techno/js.webp"
+                alt="Logo JavaScript"
+                aria-hidden="true"
             /></a>
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS"
@@ -170,14 +216,21 @@
               rel="noopener noreferrer"
               class="flex gap-1 radius-1"
               aria-label="En savoir plus sur CSS"
-              >CSS<img src="img/icon/techno/css.webp" alt="Logo CSS3" aria-hidden="true"
+              >CSS<img
+                src="img/icon/techno/css.webp"
+                alt="Logo CSS3"
+                aria-hidden="true"
             /></a>
           </div>
         </div>
         <div class="maquet flex radius-1">
           <img src="img/digi-3.webp" alt="Capture d'écran du projet DIGI-3" />
         </div>
-        <ul class="flex radius-1" role="list" aria-label="Liens du projet DIGI-3">
+        <ul
+          class="flex radius-1"
+          role="list"
+          aria-label="Liens du projet DIGI-3"
+        >
           <li role="listitem">
             <a
               href="https://github.com/LouisB10/Digi-3"
@@ -198,20 +251,34 @@
           </li>
         </ul>
       </div>
-      <div class="projects container flex-col radius-1 padding-1 gap-1" aria-labelledby="lebivouac-title">
+      <div
+        class="projects container flex-col radius-1 padding-1 gap-1"
+        aria-labelledby="lebivouac-title"
+      >
         <div class="title gap-1 flex">
           <h2 id="lebivouac-title">LEBIVOUACQUIFUME</h2>
-          <img src="img/icon/arrow.webp" alt="Icône flèche décorative" aria-hidden="true" />
+          <img
+            src="img/icon/arrow.webp"
+            alt="Icône flèche décorative"
+            aria-hidden="true"
+          />
         </div>
         <div class="space-b flex gap-1 w-full">
-          <div class="techno gap-1 flex" role="list" aria-label="Technologies utilisées pour LeBivouacQuiFume">
+          <div
+            class="techno gap-1 flex"
+            role="list"
+            aria-label="Technologies utilisées pour LeBivouacQuiFume"
+          >
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/HTML"
               target="_blank"
               rel="noopener noreferrer"
               class="flex gap-1 radius-1"
               aria-label="En savoir plus sur HTML"
-              >HTML<img src="img/icon/techno/html.webp" alt="Logo HTML5" aria-hidden="true"
+              >HTML<img
+                src="img/icon/techno/html.webp"
+                alt="Logo HTML5"
+                aria-hidden="true"
             /></a>
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
@@ -219,7 +286,10 @@
               rel="noopener noreferrer"
               class="flex gap-1 radius-1"
               aria-label="En savoir plus sur JavaScript"
-              >JAVASCRIPT<img src="img/icon/techno/js.webp" alt="Logo JavaScript" aria-hidden="true"
+              >JAVASCRIPT<img
+                src="img/icon/techno/js.webp"
+                alt="Logo JavaScript"
+                aria-hidden="true"
             /></a>
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS"
@@ -227,14 +297,24 @@
               rel="noopener noreferrer"
               class="flex gap-1 radius-1"
               aria-label="En savoir plus sur CSS"
-              >CSS<img src="img/icon/techno/css.webp" alt="Logo CSS3" aria-hidden="true"
+              >CSS<img
+                src="img/icon/techno/css.webp"
+                alt="Logo CSS3"
+                aria-hidden="true"
             /></a>
           </div>
         </div>
         <div class="maquet flex radius-1">
-          <img src="img/lebivouac.webp" alt="Capture d'écran du projet LeBivouacQuiFume" />
+          <img
+            src="img/lebivouac.webp"
+            alt="Capture d'écran du projet LeBivouacQuiFume"
+          />
         </div>
-        <ul class="flex radius-1" role="list" aria-label="Liens du projet LeBivouacQuiFume">
+        <ul
+          class="flex radius-1"
+          role="list"
+          aria-label="Liens du projet LeBivouacQuiFume"
+        >
           <li role="listitem">
             <a
               href="https://github.com/LouisB10/LeBivouacQuiFume"
@@ -255,7 +335,10 @@
           </li>
         </ul>
       </div>
-      <div class="container deezer-widget flex-col radius-1 padding-1 gap-1" aria-label="Widget musical Deezer">
+      <div
+        class="container deezer-widget flex-col radius-1 padding-1 gap-1"
+        aria-label="Widget musical Deezer"
+      >
         <iframe
           class="border radius-1 w-full"
           title="Widget musical Deezer - Album sélectionné"
@@ -266,12 +349,24 @@
           aria-label="Lecteur musical Deezer"
         ></iframe>
       </div>
-      <div class="form container flex-col radius-1 padding-1 gap-1" aria-labelledby="contact-title">
+      <div
+        class="form container flex-col radius-1 padding-1 gap-1"
+        aria-labelledby="contact-title"
+      >
         <div class="title gap-1 flex">
           <h2 id="contact-title">CONTACT</h2>
-          <img src="img/icon/arrow.webp" alt="Icône flèche décorative" aria-hidden="true" />
+          <img
+            src="img/icon/arrow.webp"
+            alt="Icône flèche décorative"
+            aria-hidden="true"
+          />
         </div>
-        <form id="contactForm" class="flex-col gap-1 w-full" aria-label="Formulaire de contact" novalidate>
+        <form
+          id="contactForm"
+          class="flex-col gap-1 w-full"
+          aria-label="Formulaire de contact"
+          novalidate
+        >
           <div class="flex-col gap-1 w-full">
             <label for="name" class="label">Nom *</label>
             <input
@@ -280,11 +375,16 @@
               name="name"
               placeholder="Votre nom"
               required
-              class="input radius-1  w-full"
+              class="input radius-1 w-full"
               aria-describedby="nameError"
               aria-required="true"
             />
-            <span class="error-message" id="nameError" role="alert" aria-live="polite"></span>
+            <span
+              class="error-message"
+              id="nameError"
+              role="alert"
+              aria-live="polite"
+            ></span>
           </div>
           <div class="flex-col gap-1 w-full">
             <label for="email" class="label">Email *</label>
@@ -294,11 +394,16 @@
               name="email"
               placeholder="Votre email"
               required
-              class="input radius-1  w-full"
+              class="input radius-1 w-full"
               aria-describedby="emailError"
               aria-required="true"
             />
-            <span class="error-message" id="emailError" role="alert" aria-live="polite"></span>
+            <span
+              class="error-message"
+              id="emailError"
+              role="alert"
+              aria-live="polite"
+            ></span>
           </div>
           <div class="flex-col gap-1 w-full">
             <label for="subject" class="label">Sujet *</label>
@@ -308,11 +413,16 @@
               name="subject"
               placeholder="Sujet de votre message"
               required
-              class="input radius-1  w-full"
+              class="input radius-1 w-full"
               aria-describedby="subjectError"
               aria-required="true"
             />
-            <span class="error-message" id="subjectError" role="alert" aria-live="polite"></span>
+            <span
+              class="error-message"
+              id="subjectError"
+              role="alert"
+              aria-live="polite"
+            ></span>
           </div>
           <div class="flex-col gap-1 w-full">
             <label for="message" class="label">Message *</label>
@@ -322,21 +432,31 @@
               rows="4"
               placeholder="Votre message..."
               required
-              class="input radius-1  w-full"
+              class="input radius-1 w-full"
               aria-describedby="messageError"
               aria-required="true"
             ></textarea>
-            <span class="error-message" id="messageError" role="alert" aria-live="polite"></span>
+            <span
+              class="error-message"
+              id="messageError"
+              role="alert"
+              aria-live="polite"
+            ></span>
           </div>
           <button
             type="submit"
             id="submitBtn"
-            class="button radius-1  w-full"
+            class="button radius-1 w-full"
             aria-describedby="formStatus"
           >
             Envoyer
           </button>
-          <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+          <div
+            id="formStatus"
+            class="form-status"
+            role="status"
+            aria-live="polite"
+          ></div>
         </form>
       </div>
       <button
@@ -345,7 +465,11 @@
         aria-label="Retour en haut de la page"
         title="Retour en haut de la page"
       >
-        <img src="img/arrow-backtotop.webp" alt="Icône flèche vers le haut" aria-hidden="true" />
+        <img
+          src="img/arrow-backtotop.webp"
+          alt="Icône flèche vers le haut"
+          aria-hidden="true"
+        />
       </button>
       <div class="footer-bottom flex-col gap-1" aria-label="Pied de page">
         <a href=""
@@ -359,7 +483,11 @@
             src="https://bff.ecoindex.fr/badge/?theme=dark&url=https://louisbousquet.orktk.fr/"
             alt="Badge EcoIndex - Score d'impact environnemental du site"
         /></a>
-        <div id="wcb" class="carbonbadge wcb-d" aria-label="Badge Website Carbon - Impact carbone du site"></div>
+        <div
+          id="wcb"
+          class="carbonbadge wcb-d"
+          aria-label="Badge Website Carbon - Impact carbone du site"
+        ></div>
       </div>
       <svg id="texture">
         <filter id="noise">
@@ -381,9 +509,9 @@
     <!-- Config EmailJS-->
     <script>
       const EMAILJS_CONFIG = {
-        SERVICE_ID: 'service_zgmh4fo',
-        TEMPLATE_ID: 'template_4mhb9hd',
-        PUBLIC_KEY: 'ShRkLubDEAeXKf0C8'
+        SERVICE_ID: "service_zgmh4fo",
+        TEMPLATE_ID: "template_4mhb9hd",
+        PUBLIC_KEY: "ShRkLubDEAeXKf0C8",
       };
     </script>
     <script src="script.js"></script>

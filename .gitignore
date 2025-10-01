@@ -1,6 +1,4 @@
-kub/ 
-# Configuration sensible
-config.js
+kub/
 
 # Fichiers d'environnement
 .env
